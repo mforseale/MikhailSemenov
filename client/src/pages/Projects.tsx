@@ -79,7 +79,7 @@ export default function Projects() {
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between mb-4">
                         <div className={`w-12 h-12 bg-gradient-to-br ${getIconGradient(project.category)} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                          <i className={`${project.icon} text-white text-xl`}></i>
+                          <span className="text-2xl">{project.icon}</span>
                         </div>
                         <Badge className={categoryColors[project.category] || "bg-gray-100 text-gray-700 border-gray-200"}>
                           {project.category}

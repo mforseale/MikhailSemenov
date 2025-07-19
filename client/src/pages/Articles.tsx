@@ -97,34 +97,45 @@ export default function Articles() {
                 >
                   <Card className="gradient-primary text-white relative overflow-hidden card-hover cursor-pointer"
                         onClick={() => setSelectedArticle(featuredArticle)}>
-                    <CardContent className="p-8">
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
-                      
-                      <div className="relative z-10">
-                        <div className="flex items-center gap-4 mb-4">
-                          <Badge variant="secondary" className="bg-white/20 text-white border-white/20">
-                            Рекомендуемое
-                          </Badge>
-                          <Badge variant="secondary" className="bg-tek-red/80 text-white border-tek-red/80">
-                            {featuredArticle.category}
-                          </Badge>
+                    <div className="flex flex-col lg:flex-row">
+                      {featuredArticle.imageUrl && (
+                        <div className="lg:w-1/2 h-64 lg:h-auto">
+                          <img 
+                            src={featuredArticle.imageUrl} 
+                            alt={featuredArticle.title}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
+                      )}
+                      <CardContent className="p-8 flex-1">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                        <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
                         
-                        <h3 className="text-2xl font-bold mb-4">{featuredArticle.title}</h3>
-                        <p className="text-white/90 mb-6 leading-relaxed">
-                          {featuredArticle.excerpt}
-                        </p>
-                        
-                        <div className="flex items-center text-white/80 text-sm">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          {featuredArticle.publishedAt}
-                          <span className="mx-2">•</span>
-                          <Clock className="w-4 h-4 mr-2" />
-                          {featuredArticle.readTime}
+                        <div className="relative z-10">
+                          <div className="flex items-center gap-4 mb-4">
+                            <Badge variant="secondary" className="bg-white/20 text-white border-white/20">
+                              Рекомендуемое
+                            </Badge>
+                            <Badge variant="secondary" className="bg-tek-red/80 text-white border-tek-red/80">
+                              {featuredArticle.category}
+                            </Badge>
+                          </div>
+                          
+                          <h3 className="text-2xl font-bold mb-4">{featuredArticle.title}</h3>
+                          <p className="text-white/90 mb-6 leading-relaxed">
+                            {featuredArticle.excerpt}
+                          </p>
+                          
+                          <div className="flex items-center text-white/80 text-sm">
+                            <Calendar className="w-4 h-4 mr-2" />
+                            {featuredArticle.publishedAt}
+                            <span className="mx-2">•</span>
+                            <Clock className="w-4 h-4 mr-2" />
+                            {featuredArticle.readTime}
+                          </div>
                         </div>
-                      </div>
-                    </CardContent>
+                      </CardContent>
+                    </div>
                   </Card>
                 </motion.div>
               )}
@@ -137,8 +148,17 @@ export default function Articles() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="gradient-card border border-gray-100 card-hover cursor-pointer h-full"
+                  <Card className="gradient-card border border-gray-100 card-hover cursor-pointer h-full group"
                         onClick={() => setSelectedArticle(article)}>
+                    {article.imageUrl && (
+                      <div className="h-48 overflow-hidden">
+                        <img 
+                          src={article.imageUrl} 
+                          alt={article.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                    )}
                     <CardContent className="p-6">
                       <div className="mb-4">
                         <Badge variant="secondary" className="tech-tag">

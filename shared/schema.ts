@@ -20,6 +20,7 @@ export const articles = pgTable("articles", {
   publishedAt: text("published_at").notNull(),
   readTime: text("read_time").notNull(),
   featured: boolean("featured").default(false),
+  imageUrl: text("image_url"),
 });
 
 export const projects = pgTable("projects", {

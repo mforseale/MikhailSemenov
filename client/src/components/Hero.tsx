@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import mikhailPhoto from "@assets/image_1752901840904.png";
+import mikhailPhoto from "@assets/image_1752901611663.png";
 
 export default function Hero() {
   const scrollToContacts = () => {
@@ -64,7 +64,7 @@ export default function Hero() {
               <Button
                 variant="outline"
                 asChild
-                className="border-tek-blue text-tek-blue px-6 py-3 rounded-xl font-medium hover:bg-tek-blue hover:text-white transition-colors"
+                className="border-tek-blue text-tek-blue px-6 py-3 rounded-xl font-medium hover:bg-tek-blue/10 hover:border-tek-blue-dark transition-colors"
               >
                 <a href="https://npptec.ru/" target="_blank" rel="noopener noreferrer">
                   Посетить сайт компании
@@ -80,15 +80,17 @@ export default function Hero() {
             className="flex justify-center"
           >
             <div className="relative">
-              <div className="absolute inset-0 gradient-primary rounded-full blur-3xl opacity-20 scale-110 animate-pulse-glow"></div>
-              <motion.img
-                src={mikhailPhoto}
-                alt="Михаил Семёнов"
-                className="relative w-80 h-80 rounded-full object-cover shadow-2xl animate-float"
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              />
+              <div className="absolute inset-0 gradient-primary rounded-3xl blur-3xl opacity-30 scale-110 animate-pulse-glow"></div>
+              <div className="relative gradient-primary p-2 rounded-3xl shadow-2xl">
+                <motion.img
+                  src={mikhailPhoto}
+                  alt="Михаил Семёнов"
+                  className="w-80 h-80 object-cover rounded-2xl animate-float"
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                />
+              </div>
             </div>
           </motion.div>
         </div>

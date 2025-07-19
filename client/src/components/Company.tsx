@@ -1,17 +1,22 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MapPin, Globe } from "lucide-react";
+import companyImage1 from "@assets/image_1752905450607.png";
+import companyImage2 from "@assets/image_1752905455120.png";
+import companyImage3 from "@assets/image_1752905460870.png";
+import companyImage4 from "@assets/image_1752905464093.png";
+import tekLogo from "@assets/a78fed02-64f2-468b-9d91-58a20b8897b4_1752901753167.png";
 
 const companyImages = [
-  "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
-  "https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
-  "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
-  "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+  companyImage1,
+  companyImage2,
+  companyImage3,
+  companyImage4,
 ];
 
 export default function Company() {
   return (
-    <section id="company" className="py-20 gradient-bg">
+    <section id="company" className="py-16 gradient-bg">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -21,7 +26,14 @@ export default function Company() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-4xl font-bold text-neutral-700 mb-6">О месте работы</h2>
+              <div className="flex items-center gap-4 mb-6">
+                <img 
+                  src={tekLogo} 
+                  alt="НПП ТЭК Логотип" 
+                  className="w-16 h-12 object-contain"
+                />
+                <h2 className="text-4xl font-bold text-neutral-700">О месте работы</h2>
+              </div>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 НПП «Томская электронная компания» — современное инжиниринговое и производственное предприятие, 
                 предлагающее решения, продукцию и разработку программного обеспечения.

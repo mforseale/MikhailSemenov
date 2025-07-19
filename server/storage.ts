@@ -62,6 +62,7 @@ export class MemStorage implements IStorage {
         publishedAt: "6 марта 2022",
         readTime: "3 мин чтения",
         featured: true,
+        imageUrl: "/attached_assets/image_1752905548987.png",
       },
       {
         title: "«Томская Электронная Компания» внедрила около тридцати решений в сфере цифровизации бизнеса",
@@ -84,6 +85,7 @@ export class MemStorage implements IStorage {
         publishedAt: "4 марта 2022",
         readTime: "4 мин чтения",
         featured: false,
+        imageUrl: "/attached_assets/image_1752905552104.png",
       },
       {
         title: "Softline и Microsoft заключили соглашение Enterprise Agreement с ООО НПП ТЭК",
@@ -134,12 +136,13 @@ export class MemStorage implements IStorage {
         publishedAt: "27 февраля 2009",
         readTime: "5 мин чтения",
         featured: false,
+        imageUrl: "/attached_assets/image_1752905557437.png",
       },
     ];
 
     sampleArticles.forEach(article => {
       const id = this.currentArticleId++;
-      this.articles.set(id, { ...article, id });
+      this.articles.set(id, { ...article, id, featured: article.featured || false });
     });
   }
 
@@ -150,42 +153,42 @@ export class MemStorage implements IStorage {
         description: "Интеллектуальный бот для автоматизации HR-процессов.",
         technologies: ["Python", "Telegram Bot API", "PostgreSQL", "1С"],
         category: "Автоматизация",
-        icon: "fas fa-robot",
+        icon: "🤖",
       },
       {
         title: "Трекер времени \"UseMyTime\"",
         description: "Система учета рабочего времени и управления проектами. Позволяет отслеживать время, затраченное на задачи, генерировать отчеты и анализировать эффективность работы команды.",
         technologies: ["React", "Node.js", "MongoDB", "React Native"],
         category: "Управление",
-        icon: "fas fa-clock",
+        icon: "⏰",
       },
       {
         title: "ИТ-регламенты",
         description: "Комплексная система регламентов и процедур для ИТ-отдела.",
         technologies: ["Confluence", "JIRA", "Git", "ITIL"],
         category: "Документооборот",
-        icon: "fas fa-file-alt",
+        icon: "📋",
       },
       {
         title: "AI ChatGPT-боты",
         description: "Интеллектуальные чат-боты на базе GPT для автоматизации клиентского сервиса, технической поддержки и внутренних бизнес-процессов компании.",
         technologies: ["OpenAI API", "Python", "FastAPI", "Redis"],
         category: "ИИ",
-        icon: "fas fa-brain",
+        icon: "🧠",
       },
       {
         title: "Сайты компании",
         description: "Разработка и поддержка корпоративных веб-сайтов.",
         technologies: ["WordPress", "PHP", "JavaScript", "MySQL"],
         category: "Веб-разработка",
-        icon: "fas fa-globe",
+        icon: "🌐",
       },
       {
         title: "Битрикс 24",
         description: "Внедрение и настройка Битрикс24.",
         technologies: ["Битрикс24", "REST API", "Webhooks", "1С"],
         category: "CRM",
-        icon: "fas fa-cog",
+        icon: "⚙️",
       },
     ];
 

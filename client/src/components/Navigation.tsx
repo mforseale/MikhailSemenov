@@ -42,10 +42,15 @@ export default function Navigation() {
   }, [location]);
 
   const handleNavClick = (href: string, id: string) => {
-    if (href.startsWith("#") && location === "/") {
-      // Scroll to section on same page
-      const element = document.getElementById(id);
-      element?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (href.startsWith("#")) {
+      if (location === "/") {
+        // Scroll to section on same page
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        // Navigate to home page with hash
+        window.location.href = "/" + href;
+      }
     }
     setIsMenuOpen(false);
   };

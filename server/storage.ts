@@ -142,7 +142,7 @@ export class MemStorage implements IStorage {
 
     sampleArticles.forEach(article => {
       const id = this.currentArticleId++;
-      this.articles.set(id, { ...article, id, featured: article.featured || false });
+      this.articles.set(id, { ...article, id,  featured: article.featured ?? false,  imageUrl: article.imageUrl ?? null,});
     });
   }
 

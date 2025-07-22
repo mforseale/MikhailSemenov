@@ -18,10 +18,18 @@ export default function Articles() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
 
-  const { data: articles = [], isLoading } = useQuery<Article[]>({
-    queryKey: ["/api/articles", { search: searchQuery, category: selectedCategory }],
-  });
-
+ const { data: articles = [], isLoading } = useQuery<Article[]>({
+  queryKey: ["/api/articles", searchQuery, selectedCategory],
+  queryFn: async () => {
+    const params = new URLSearchParams();
+    if (searchQuery) params.append('search', searchQuery);
+    if (selectedCategory && selectedCategory !== 'all') {
+      params.append('category', selectedCategory);
+    }
+    const response = await fetch(`/api/articles?${params.toString()}`);
+    return response.json();
+  },
+});
   const filteredArticles = articles.filter(article => {
     const matchesSearch = !searchQuery || 
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -98,15 +106,15 @@ export default function Articles() {
                   <Card className="gradient-primary text-white relative overflow-hidden card-hover cursor-pointer"
                         onClick={() => setSelectedArticle(featuredArticle)}>
                     <div className="flex flex-col lg:flex-row">
-                      {featuredArticle.imageUrl && (
-                        <div className="lg:w-1/2 h-64 lg:h-auto">
-                          <img 
-                            src={featuredArticle.imageUrl} 
-                            alt={featuredArticle.title}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      )}
+                    {featuredArticle.imageUrl && (
+                    <div className="lg:w-1/2 h-64 lg:h-auto">
+                      <img 
+                        src={featuredArticle.imageUrl} 
+                        alt={featuredArticle.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                       <CardContent className="p-8 flex-1">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
                         <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>

@@ -4,6 +4,8 @@ import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 
+
+
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission
   app.post("/api/contacts", async (req, res) => {

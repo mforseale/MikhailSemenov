@@ -20,7 +20,7 @@ export default function ArticlesSection() {
   const { data: articles = [], isLoading } = useQuery<Article[]>({
     queryKey: ["/api/articles"],
   });
-
+  console.log(articles);
   const filteredArticles = articles.filter(article => {
     const matchesSearch = !searchQuery || 
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

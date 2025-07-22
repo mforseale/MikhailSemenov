@@ -9,7 +9,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="pt-20 min-h-screen gradient-bg">
+    <section id="home" className="pt-20 gradient-bg">
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -85,7 +85,7 @@ export default function Hero() {
                 <motion.img
                   src={mikhailPhoto}
                   alt="Михаил Семёнов"
-                  className="w-80 h-80 object-cover rounded-2xl animate-float"
+                  className="w-full h-auto max-w-md lg:max-w-full object-contain rounded-2xl animate-float"
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.8, delay: 0.4 }}

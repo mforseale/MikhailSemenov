@@ -103,7 +103,7 @@ export default function Certificates() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="gradient-card border border-gray-100 card-hover h-full group cursor-pointer">
-                  <div className="h-64 overflow-hidden">
+                  <div className="h-130 overflow-hidden">
                     <img 
                       src={cert.image} 
                       alt={cert.title}

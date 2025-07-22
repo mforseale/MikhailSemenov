@@ -18,7 +18,8 @@ export default function ArticlesSection() {
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
 
   const { data: articles = [], isLoading } = useQuery<Article[]>({
-    queryKey: ["/api/articles"],
+    queryKey: ['articles'],
+    queryFn: () => fetch('https://mikhailsemenov1.onrender.com/api/articles').then(res => res.json())
   });
   console.log(articles);
   const filteredArticles = articles.filter(article => {

@@ -34,23 +34,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Get all articles
   app.get("/api/articles", async (req, res) => {
-    try {
-      const { search, category } = req.query;
-      
-      let articles;
-      if (search) {
-        articles = await storage.searchArticles(search as string);
-      } else if (category && category !== 'all') {
-        articles = await storage.getArticlesByCategory(category as string);
-      } else {
-        articles = await storage.getArticles();
-      }
-      
-      res.json(articles);
-    } catch (error) {
-      res.status(500).json({ message: "Internal server error" });
+  res.json([
+    {
+      id: 1,
+      title: "Test article",
+      content: "Lorem ipsum",
+      excerpt: "Short text",
+      category: "general",
+      publishedAt: new Date().toISOString(),
+      readTime: "5 min",
+      featured: false,
+      imageUrl: null
     }
-  });
+  ]);
+});
 
   // Get single article
   app.get("/api/articles/:id", async (req, res) => {

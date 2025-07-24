@@ -8,8 +8,8 @@ const navItems = [
   { href: "/", label: "Главная", id: "home" },
   { href: "/articles", label: "Статьи", id: "articles" },
   { href: "/projects", label: "Проекты", id: "projects" },
-  { href: "#company", label: "Компания", id: "company" },
-  { href: "#contacts", label: "Контакты", id: "contacts" },
+  { href: "/company", label: "Компания", id: "company" },
+  { href: "/contacts", label: "Контакты", id: "contacts" },
 ];
 
 export default function Navigation() {

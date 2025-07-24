@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import tekLogo from "@assets/image_1752901844317.png";
-
 const sections = [
   { href: "#home", label: "Главная" },
   { href: "/articles", label: "Статьи" },

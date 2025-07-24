@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import tekLogo from "@assets/image_1752901844317.png";
-
 const navItems = [
   { href: "/", label: "Главная", id: "home" },
   { href: "/articles", label: "Статьи", id: "articles" },

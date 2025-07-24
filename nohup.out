@@ -1,0 +1,224 @@
+
+> rest-express@1.0.0 start
+> cross-env NODE_ENV=production node dist/index.js
+
+STATIC PATH: /home/seele/site/attached_assets
+files in: [
+  'Pasted---1752901823584_1752901823584.txt',
+  'a78fed02-64f2-468b-9d91-58a20b8897b4_1752901753167.png',
+  'image_1752901611663.png',
+  'image_1752901656083.png',
+  'image_1752901732690.png',
+  'image_1752901738196.png',
+  'image_1752901743927.png',
+  'image_1752901747546.png',
+  'image_1752901840904.png',
+  'image_1752901844317.png',
+  'image_1752902454062.png',
+  'image_1752902458341.png',
+  'image_1752905450607.png',
+  'image_1752905455120.png',
+  'image_1752905460870.png',
+  'image_1752905464093.png',
+  'image_1752905492150.png',
+  'image_1752905498961.png',
+  'image_1752905501892.png',
+  'image_1752905504166.png',
+  'image_1752905506314.png',
+  'image_1752905508759.png',
+  'image_1752905511131.png',
+  'image_1752905513225.png',
+  'image_1752905515119.png',
+  'image_1752905548987.png',
+  'image_1752905552104.png',
+  'image_1752905557437.png',
+  'image_1752905560675.png'
+]
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at file:///home/seele/site/dist/index.js:514:10
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 5000
+}
+
+Node.js v20.19.4
+
+> rest-express@1.0.0 start
+> cross-env NODE_ENV=production node dist/index.js
+
+STATIC PATH: /home/seele/site/attached_assets
+files in: [
+  'Pasted---1752901823584_1752901823584.txt',
+  'a78fed02-64f2-468b-9d91-58a20b8897b4_1752901753167.png',
+  'image_1752901611663.png',
+  'image_1752901656083.png',
+  'image_1752901732690.png',
+  'image_1752901738196.png',
+  'image_1752901743927.png',
+  'image_1752901747546.png',
+  'image_1752901840904.png',
+  'image_1752901844317.png',
+  'image_1752902454062.png',
+  'image_1752902458341.png',
+  'image_1752905450607.png',
+  'image_1752905455120.png',
+  'image_1752905460870.png',
+  'image_1752905464093.png',
+  'image_1752905492150.png',
+  'image_1752905498961.png',
+  'image_1752905501892.png',
+  'image_1752905504166.png',
+  'image_1752905506314.png',
+  'image_1752905508759.png',
+  'image_1752905511131.png',
+  'image_1752905513225.png',
+  'image_1752905515119.png',
+  'image_1752905548987.png',
+  'image_1752905552104.png',
+  'image_1752905557437.png',
+  'image_1752905560675.png'
+]
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at file:///home/seele/site/dist/index.js:514:10
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 5000
+}
+
+Node.js v20.19.4
+
+> rest-express@1.0.0 start
+> cross-env NODE_ENV=production node dist/index.js
+
+
+> rest-express@1.0.0 start
+> cross-env NODE_ENV=production node dist/index.js
+
+STATIC PATH: /home/seele/site/attached_assets
+files in: [
+  'Pasted---1752901823584_1752901823584.txt',
+  'a78fed02-64f2-468b-9d91-58a20b8897b4_1752901753167.png',
+  'image_1752901611663.png',
+  'image_1752901656083.png',
+  'image_1752901732690.png',
+  'image_1752901738196.png',
+  'image_1752901743927.png',
+  'image_1752901747546.png',
+  'image_1752901840904.png',
+  'image_1752901844317.png',
+  'image_1752902454062.png',
+  'image_1752902458341.png',
+  'image_1752905450607.png',
+  'image_1752905455120.png',
+  'image_1752905460870.png',
+  'image_1752905464093.png',
+  'image_1752905492150.png',
+  'image_1752905498961.png',
+  'image_1752905501892.png',
+  'image_1752905504166.png',
+  'image_1752905506314.png',
+  'image_1752905508759.png',
+  'image_1752905511131.png',
+  'image_1752905513225.png',
+  'image_1752905515119.png',
+  'image_1752905548987.png',
+  'image_1752905552104.png',
+  'image_1752905557437.png',
+  'image_1752905560675.png'
+]
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at file:///home/seele/site/dist/index.js:514:10
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 5000
+}
+
+Node.js v20.19.4
+STATIC PATH: /home/seele/site/attached_assets
+files in: [
+  'Pasted---1752901823584_1752901823584.txt',
+  'a78fed02-64f2-468b-9d91-58a20b8897b4_1752901753167.png',
+  'image_1752901611663.png',
+  'image_1752901656083.png',
+  'image_1752901732690.png',
+  'image_1752901738196.png',
+  'image_1752901743927.png',
+  'image_1752901747546.png',
+  'image_1752901840904.png',
+  'image_1752901844317.png',
+  'image_1752902454062.png',
+  'image_1752902458341.png',
+  'image_1752905450607.png',
+  'image_1752905455120.png',
+  'image_1752905460870.png',
+  'image_1752905464093.png',
+  'image_1752905492150.png',
+  'image_1752905498961.png',
+  'image_1752905501892.png',
+  'image_1752905504166.png',
+  'image_1752905506314.png',
+  'image_1752905508759.png',
+  'image_1752905511131.png',
+  'image_1752905513225.png',
+  'image_1752905515119.png',
+  'image_1752905548987.png',
+  'image_1752905552104.png',
+  'image_1752905557437.png',
+  'image_1752905560675.png'
+]
+node:events:502
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at file:///home/seele/site/dist/index.js:514:10
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1944:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 5000
+}
+
+Node.js v20.19.4

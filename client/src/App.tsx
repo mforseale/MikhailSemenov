@@ -27,8 +27,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <div className="min-h-screen flex flex-col">
         <Toaster />
         <Router />
+        </div>
       </TooltipProvider>
     </QueryClientProvider>
   );

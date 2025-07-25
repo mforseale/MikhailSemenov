@@ -6,7 +6,7 @@ export default function CompanyPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-20">
+      <main className="flex-grow pt-20">
         <Company />
       </main>
       <Footer />
